@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: orange;
+}
+
+.container{
+  margin: 0 auto;
+  border: 3px solid white;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.square{
+  border: 3px solid white;
+  width:calc(100%/ 10) ;
+  height:calc(100%/ 10) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square span{
+  display: none;
+}
+
+.square.clicked span{
+  display: block;
+}
+
+.square.clicked.pari{
+  background-color: brown;
+}
+
+.square.clicked.dispari{
+  background-color: green;
+}
+
