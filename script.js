@@ -19,9 +19,11 @@ init();
 // funzione di inizializzazione
 function init(){
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 1; i <= 100; i++) {
     
     const sq = creaQuadretto(container);
+    console.log(i);
+    sq.innerHTML = `<span> ${i}</span>`;
   
   }
 }
@@ -33,20 +35,6 @@ function creaQuadretto(target) {
 
   target.append(sq);
   return sq    
-
-  
-}
-
-// funzione crea numeri
-function creaNumeri(target){
-  
-  const spanNum= document.createElement("span");
-  spanNum.className = "num_span";
-  let numeroQuad = document.querySelector(".num_span")
-  
-  target.append(spanNum);
-  return spanNum;
-
 
 }
 
