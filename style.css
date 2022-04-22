@@ -26,15 +26,15 @@ body{
   align-items: center;
 }
 
-.square span{
+/* .square span{
   display: none;
-}
+} */
 
-.square.clicked span{
+/* .square.clicked span{
   display: block;
-}
+} */
 
-.square.clicked.pari{
+.square.clicked{
   background-color: brown;
 }
 

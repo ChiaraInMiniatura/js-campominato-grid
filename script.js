@@ -16,27 +16,41 @@ const container = document.querySelector(".container");
 
 init();
 
+
 // funzione di inizializzazione
 function init(){
-
+  
   for (let i = 1; i <= 100; i++) {
     
     const sq = creaQuadretto(container);
     console.log(i);
-    sq.innerHTML = `<span> ${i}</span>`;
-  
+    // mettere i numeri nei quadretti
+    sq.innerHTML = `<span> ${i} </span>`;
+    // //accendi quadratino
+    // sq.addEventListener("click", clickedSq);
+    
+    
   }
 }
+
 
 // funzione crea quadretti
 function creaQuadretto(target) {
   const sq= document.createElement("div");
   sq.className = "square";
 
+  //accendi quadratino
+  sq.addEventListener("click", clickedSq);
+  
   target.append(sq);
   return sq    
-
+  
 }
 
+// funzione per accendere i quadretti
 
+function clickedSq(){
+  console.log(this);
+  this.classList.add("clicked");
+}
   
